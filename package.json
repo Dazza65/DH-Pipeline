@@ -1,5 +1,6 @@
 {
   "name": "DH-Pipeline",
+  "description": "A CDK CodePipeline construct",
   "repository": {
     "type": "git",
     "url": "https://github.com/dazza65/DH-Pipeline.git"
@@ -38,7 +39,7 @@
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk-lib": "2.61.1",
     "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
@@ -58,11 +59,21 @@
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.61.1",
     "constructs": "^10.0.5"
   },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "2.61.1-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "2.61.1-alpha.0"
+  },
   "keywords": [
-    "cdk"
+    "P",
+    "cdk",
+    "e",
+    "i",
+    "l",
+    "n",
+    "p"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
@@ -108,7 +119,7 @@
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
+  "stability": "experimental",
   "jsii": {
     "outdir": "dist",
     "targets": {},
