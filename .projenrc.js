@@ -16,6 +16,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     `@aws-cdk/aws-apigatewayv2-integrations-alpha@${cdkVersion}-alpha.0`,
   ],
   stability: 'experimental',
-  packageName: 'DH-Pipeline',
+  packageName: 'dh-pipeline',
 });
 project.synth();

@@ -2,30 +2,30 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### CdkSampleLib <a name="CdkSampleLib" id="DH-Pipeline.CdkSampleLib"></a>
+### CdkSampleLib <a name="CdkSampleLib" id="dh-pipeline.CdkSampleLib"></a>
 
-#### Initializers <a name="Initializers" id="DH-Pipeline.CdkSampleLib.Initializer"></a>
+#### Initializers <a name="Initializers" id="dh-pipeline.CdkSampleLib.Initializer"></a>
 
 ```typescript
-import { CdkSampleLib } from 'DH-Pipeline'
+import { CdkSampleLib } from 'dh-pipeline'
 
 new CdkSampleLib(scope: Construct, id: string)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#DH-Pipeline.CdkSampleLib.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#DH-Pipeline.CdkSampleLib.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#dh-pipeline.CdkSampleLib.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#dh-pipeline.CdkSampleLib.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="DH-Pipeline.CdkSampleLib.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="dh-pipeline.CdkSampleLib.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="DH-Pipeline.CdkSampleLib.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="dh-pipeline.CdkSampleLib.Initializer.parameter.id"></a>
 
 - *Type:* string
 
@@ -35,11 +35,11 @@ new CdkSampleLib(scope: Construct, id: string)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#DH-Pipeline.CdkSampleLib.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#dh-pipeline.CdkSampleLib.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="DH-Pipeline.CdkSampleLib.toString"></a>
+##### `toString` <a name="toString" id="dh-pipeline.CdkSampleLib.toString"></a>
 
 ```typescript
 public toString(): string
@@ -51,21 +51,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#DH-Pipeline.CdkSampleLib.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#dh-pipeline.CdkSampleLib.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="DH-Pipeline.CdkSampleLib.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="dh-pipeline.CdkSampleLib.isConstruct"></a>
 
 ```typescript
-import { CdkSampleLib } from 'DH-Pipeline'
+import { CdkSampleLib } from 'dh-pipeline'
 
 CdkSampleLib.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="DH-Pipeline.CdkSampleLib.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="dh-pipeline.CdkSampleLib.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -77,11 +77,11 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#DH-Pipeline.CdkSampleLib.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#dh-pipeline.CdkSampleLib.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="DH-Pipeline.CdkSampleLib.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="dh-pipeline.CdkSampleLib.property.node"></a>
 
 ```typescript
 public readonly node: Node;
