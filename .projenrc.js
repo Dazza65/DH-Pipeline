@@ -9,13 +9,19 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: 'DH-Pipeline',
   repositoryUrl: 'https://github.com/dazza65/DH-Pipeline.git',
-  keywords: 'Pipeline',
-  description: 'A CDK CodePipeline construct',
-  deps: [
-    `@aws-cdk/aws-apigatewayv2-alpha@${cdkVersion}-alpha.0`,
-    `@aws-cdk/aws-apigatewayv2-integrations-alpha@${cdkVersion}-alpha.0`,
+  keywords: [
+    'Pipeline',
   ],
+  description: 'A CDK CodePipeline construct',
   stability: 'experimental',
   packageName: 'dh-pipeline',
+  deps: [
+    'js-yaml@^4.1.0',
+    '@types/js-yaml@^4.0.5',
+  ],
+  bundledDeps: [
+    'js-yaml',
+    '@types/js-yaml',
+  ],
 });
 project.synth();

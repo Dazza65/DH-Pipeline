@@ -101,6 +101,14 @@
       "type": "build"
     },
     {
+      "name": "@types/js-yaml",
+      "type": "bundled"
+    },
+    {
+      "name": "js-yaml",
+      "type": "bundled"
+    },
+    {
       "name": "@types/babel__traverse",
       "version": "7.18.2",
       "type": "override"
@@ -121,13 +129,13 @@
       "type": "peer"
     },
     {
-      "name": "@aws-cdk/aws-apigatewayv2-alpha",
-      "version": "2.61.1-alpha.0",
+      "name": "@types/js-yaml",
+      "version": "^4.0.5",
       "type": "runtime"
     },
     {
-      "name": "@aws-cdk/aws-apigatewayv2-integrations-alpha",
-      "version": "2.61.1-alpha.0",
+      "name": "js-yaml",
+      "version": "^4.1.0",
       "type": "runtime"
     }
   ],

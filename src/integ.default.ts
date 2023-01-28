@@ -1,7 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
-import { CdkSampleLib } from './index';
+import { DHPipeline } from './DHPipeline';
 
 const app = new cdk.App();
-const stack = new cdk.Stack(app, 'MyStack');
-
-new CdkSampleLib(stack, 'Cdk-Sample-Lib');
+// const stack = new cdk.Stack(app, 'MyTestPipelineStack');
+DHPipeline.createPipeline(app);

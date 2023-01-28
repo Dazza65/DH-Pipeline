@@ -1,0 +1,19 @@
+{
+  "version": "29.0.0",
+  "files": {
+    "0efd4864fea14b3c15d89e8e456c8f51eace8c1ecedf969ef4ecfcaf5a91a2d5": {
+      "source": {
+        "path": "DHPipelineStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "0efd4864fea14b3c15d89e8e456c8f51eace8c1ecedf969ef4ecfcaf5a91a2d5.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
