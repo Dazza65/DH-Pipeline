@@ -1,5 +1,6 @@
 # DHPipeline
 
+![icon image of a pipeline that represents the project](./images/background.jpeg)
 This CDK construct will create a CI/CD pipeline.  :smile:
 
 The intention is to provide a flexible construct that can be configured and instantiated easily to support a number of different project types, branching strategies, code commit repositories, deployment strategies and pluggable stages.
@@ -33,7 +34,18 @@ DHPipeline.createPipeline(app);
 
 The following are specific details for the Cloudformation project type:
 
-![Cloudformation CI/CD Pipeline](./diagrams/cfn-pipeline.svg)
+![Cloudformation CI/CD Pipeline](./images/cfn-pipeline.svg)
+
+Currently your repository branch needs to include the following files:
+- buildspec.yaml - specifies the command to run in the build phase
+- template.yaml - specifies the infrastructure you wish to be deployed via a cloudformation script
+
+### :green_book: To Do
+
+- [ ] Provide default buildspec
+- [ ] Confirm behaviour if the required files are not present in the repository
+- [ ] Allow for multiple cloudformation stacks
+- [ ] plus others...
 
 ## :large_blue_circle: ProjectType - CDK
 
