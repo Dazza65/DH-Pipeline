@@ -23,5 +23,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'js-yaml',
     '@types/js-yaml',
   ],
+  gitignore: [
+    'cdk.out/',
+  ],
 });
 project.synth();

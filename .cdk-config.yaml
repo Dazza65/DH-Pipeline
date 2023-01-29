@@ -1,4 +1,4 @@
-projectName: MyProject
-projectType: Cloudformation
+projectName: MyCDKProject
+projectType: CDK
 codeRepositoryName: prj1ex
 codeRepositoryBranch: master

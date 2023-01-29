@@ -885,7 +885,30 @@ const config: Config = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
+| <code><a href="#dh-pipeline.Config.property.codeRepositoryBranch">codeRepositoryBranch</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#dh-pipeline.Config.property.codeRepositoryName">codeRepositoryName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#dh-pipeline.Config.property.projectName">projectName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#dh-pipeline.Config.property.projectType">projectType</a></code> | <code><a href="#dh-pipeline.ProjectType">ProjectType</a></code> | *No description.* |
+
+---
+
+##### `codeRepositoryBranch`<sup>Required</sup> <a name="codeRepositoryBranch" id="dh-pipeline.Config.property.codeRepositoryBranch"></a>
+
+```typescript
+public readonly codeRepositoryBranch: string;
+```
+
+- *Type:* string
+
+---
+
+##### `codeRepositoryName`<sup>Required</sup> <a name="codeRepositoryName" id="dh-pipeline.Config.property.codeRepositoryName"></a>
+
+```typescript
+public readonly codeRepositoryName: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -896,6 +919,16 @@ public readonly projectName: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `projectType`<sup>Required</sup> <a name="projectType" id="dh-pipeline.Config.property.projectType"></a>
+
+```typescript
+public readonly projectType: ProjectType;
+```
+
+- *Type:* <a href="#dh-pipeline.ProjectType">ProjectType</a>
 
 ---
 
@@ -947,4 +980,26 @@ DHPipeline.createPipeline(construct: Construct, configFile?: string)
 
 
 
+
+## Enums <a name="Enums" id="Enums"></a>
+
+### ProjectType <a name="ProjectType" id="dh-pipeline.ProjectType"></a>
+
+#### Members <a name="Members" id="Members"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#dh-pipeline.ProjectType.CFN">CFN</a></code> | *No description.* |
+| <code><a href="#dh-pipeline.ProjectType.CDK">CDK</a></code> | *No description.* |
+
+---
+
+##### `CFN` <a name="CFN" id="dh-pipeline.ProjectType.CFN"></a>
+
+---
+
+
+##### `CDK` <a name="CDK" id="dh-pipeline.ProjectType.CDK"></a>
+
+---
 
