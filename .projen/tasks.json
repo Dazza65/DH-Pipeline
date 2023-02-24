@@ -130,6 +130,78 @@
         }
       ]
     },
+    "integ:demo:assert": {
+      "name": "integ:demo:assert",
+      "description": "assert the snapshot of integration test 'demo'",
+      "steps": [
+        {
+          "exec": "[ -d \"test/demo.integ.snapshot\" ] || (echo \"No snapshot available for integration test 'demo'. Run 'projen integ:demo:deploy' to capture.\" && exit 1)"
+        },
+        {
+          "exec": "cdk synth --app \"ts-node -P tsconfig.dev.json test/demo.integ.ts\" --no-notices --no-version-reporting --no-asset-metadata --no-path-metadata -o test/.tmp/demo.integ/assert.cdk.out > /dev/null"
+        },
+        {
+          "exec": "diff -r -x asset.* -x cdk.out -x manifest.json -x tree.json test/demo.integ.snapshot/ test/.tmp/demo.integ/assert.cdk.out/"
+        }
+      ]
+    },
+    "integ:demo:deploy": {
+      "name": "integ:demo:deploy",
+      "description": "deploy integration test 'demo' and capture snapshot",
+      "steps": [
+        {
+          "exec": "rm -fr test/.tmp/demo.integ/deploy.cdk.out"
+        },
+        {
+          "exec": "cdk deploy --app \"ts-node -P tsconfig.dev.json test/demo.integ.ts\" --no-notices --no-version-reporting --no-asset-metadata --no-path-metadata '**' --require-approval=never -o test/.tmp/demo.integ/deploy.cdk.out"
+        },
+        {
+          "exec": "rm -fr test/demo.integ.snapshot"
+        },
+        {
+          "exec": "mv test/.tmp/demo.integ/deploy.cdk.out test/demo.integ.snapshot"
+        },
+        {
+          "spawn": "integ:demo:destroy"
+        }
+      ]
+    },
+    "integ:demo:destroy": {
+      "name": "integ:demo:destroy",
+      "description": "destroy integration test 'demo'",
+      "steps": [
+        {
+          "exec": "cdk destroy --app test/demo.integ.snapshot '**' --no-version-reporting"
+        }
+      ]
+    },
+    "integ:demo:snapshot": {
+      "name": "integ:demo:snapshot",
+      "description": "update snapshot for integration test \"demo\"",
+      "steps": [
+        {
+          "exec": "cdk synth --app \"ts-node -P tsconfig.dev.json test/demo.integ.ts\" --no-notices --no-version-reporting --no-asset-metadata --no-path-metadata -o test/demo.integ.snapshot > /dev/null"
+        }
+      ]
+    },
+    "integ:demo:watch": {
+      "name": "integ:demo:watch",
+      "description": "watch integration test 'demo' (without updating snapshots)",
+      "steps": [
+        {
+          "exec": "cdk watch --app \"ts-node -P tsconfig.dev.json test/demo.integ.ts\" --no-notices --no-version-reporting --no-asset-metadata --no-path-metadata '**' -o test/.tmp/demo.integ/deploy.cdk.out"
+        }
+      ]
+    },
+    "integ:snapshot-all": {
+      "name": "integ:snapshot-all",
+      "description": "update snapshot for all integration tests",
+      "steps": [
+        {
+          "spawn": "integ:demo:snapshot"
+        }
+      ]
+    },
     "package": {
       "name": "package",
       "description": "Creates the distribution package",
@@ -208,6 +280,9 @@
         },
         {
           "spawn": "eslint"
+        },
+        {
+          "spawn": "integ:demo:assert"
         }
       ]
     },
